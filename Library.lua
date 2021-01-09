@@ -5,6 +5,7 @@ local Library = {
     end,
     ['Import'] = function(module)
         if module == 'requests' then
+            return
             getgenv().requests = {
                 get = function(link, body)
                     if body == false then
@@ -19,7 +20,7 @@ local Library = {
                     elseif Cookies then
                     end
                 end
-            }
+            }}
         elseif module == 'json' then
             return {
                 decode = function(String)
