@@ -1,4 +1,4 @@
-# Lua_Python_Library
+# Lua => Python Library
 Makes some python functions compatible with RLUA (ROBLOX LUA)
 
 ### Current functions
