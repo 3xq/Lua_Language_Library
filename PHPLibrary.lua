@@ -7,4 +7,4 @@ local Library = {
     }
 }
 return Library]])()
-getgenv().import = Python.Import
+getgenv()['SERVER'] = PHP['SERVER']
