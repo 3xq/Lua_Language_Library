@@ -30,6 +30,18 @@ local Library = {
                     return game:GetService('HttpService'):JSONEncode(String)
                 end
             }
+        elseif module == 'rich' then
+            getgenv().rich = {
+                new = function()
+                    rconsoleclear()
+                end,
+                console = {
+                    log = function(args)
+                        rconsoleprint(args)
+                    end
+                }
+            }
+        end
     end
 }
 return Library]])()
