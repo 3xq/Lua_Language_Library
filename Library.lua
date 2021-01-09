@@ -33,4 +33,4 @@ local Library = {
     end
 }
 return Library]])()
-getgenv().import = Python.Import
+--getgenv().import = Python.Import
