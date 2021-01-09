@@ -33,7 +33,7 @@ local Library = {
         elseif module == 'rich' then
             getgenv().rich = {
                 new = function(String)
-                    rconsolename()
+                    rconsoleprint()
                 end,
                 console = {
                     function log(String, R, G, B)
