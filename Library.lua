@@ -21,7 +21,7 @@ local Library = {
                 end
             }
         elseif module == 'json' then
-            getgemv().json = {
+            getgenv().json = {
                 decode = function(String)
                     return game:GetService('HttpService'):JSONDecode(String)
                 end,
