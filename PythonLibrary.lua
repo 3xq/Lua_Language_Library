@@ -53,6 +53,4 @@ local Library = {
     end
 }
 return Library]])()
-for i,v in pairs(Python) do
-    getgenv()[i] = v
-end
+getgenv().import = Python.Import
