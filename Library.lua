@@ -17,6 +17,7 @@ local Library = {
                     if not Cookies then
                         return syn.request({Url=link, Method='POST', Headers=Headers})
                     elseif Cookies then
+                        return syn.request({Url=link, Method='POST', Headers=Headers, Cookies=Cookies})
                     end
                 end
             }
@@ -33,4 +34,4 @@ local Library = {
     end
 }
 return Library]])()
---getgenv().import = Python.Import
+getgenv().import = Python.Import
