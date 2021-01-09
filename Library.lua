@@ -5,7 +5,7 @@ local Library = {
     end,
     ['Import'] = function(module)
         if module == 'requests' then
-            return {
+            getgenv().requests = {
                 get = function(link, body)
                     if body == false then
                         return string.format('[Response %s]',syn.request({Url=link}).StatusCode)
