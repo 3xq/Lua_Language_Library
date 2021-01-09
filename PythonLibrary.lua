@@ -36,8 +36,8 @@ local Library = {
                     rconsoleclear()
                 end,
                 console = {
-                    log = function(args)
-                        rconsoleprint(args)
+                    log = function(String,R,G,B)
+                        printconsole(String,R,G,B)
                     end
                 }
             }
