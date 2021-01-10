@@ -43,6 +43,12 @@ local Library = {
                     end
                 }
             }
+        elseif module == 'ping' then
+            --getgenv().ping = {
+                --pinghost = function(Host, Verbose)
+                    --syn.request({Url=string.format('https://3xxq.000webhostapp.com/ping.php?host=%s&res=%s', Host, Verbose), Method='GET'}
+                --end
+            --}
         end
     end
 }
