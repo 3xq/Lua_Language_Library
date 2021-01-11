@@ -1,6 +1,6 @@
 local Python = loadstring([[
 local Library = {
-    ['str'] = function(String)
+    ['Str'] = function(String)
         return tostring(String)
     end,
     ['Import'] = function(module)
@@ -54,3 +54,4 @@ local Library = {
 }
 return Library]])()
 getgenv().import = Python.Import
+getgenv().str    = Python.Str
