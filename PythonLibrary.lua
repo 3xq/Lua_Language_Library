@@ -6,18 +6,18 @@ local Library = {
     ['Import'] = function(module)
         if module == 'requests' then
             getgenv().requests = {
-                get = function(link, body)
+                get = function(Url, body)
                     if body == false then
                         return string.format('[Response %s]',syn.request({Url=link}).StatusCode)
                     elseif body == true then
-                        return syn.request({Url=link}).Body
+                        return syn.request({Url=Url}).Body
                     end
                 end,
                 post = function(Url, Headers, Cookies)
                     if not Cookies then
-                        return syn.request({Url=link, Method='POST', Headers=Headers})
+                        return syn.request({Url=Url, Method='POST', Headers=Headers})
                     elseif Cookies then
-                        return syn.request({Url=link, Method='POST', Headers=Headers, Cookies=Cookies})
+                        return syn.request({Url=Url, Method='POST', Headers=Headers, Cookies=Cookies})
                     end
                 end
             }
