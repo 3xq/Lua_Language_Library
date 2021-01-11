@@ -49,10 +49,6 @@ local Library = {
                     --return syn.request({Url=string.format('https://3xxq.000webhostapp.com/ping.php?host=%s&res=%s', Host, Verbose), Method='GET'}.Body
                 --end
             }
-        elseif module == 'mod' then
-            local function Print(string)
-                rconsoleprint(string)
-            end
         end
     end
 }
