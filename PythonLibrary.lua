@@ -7,9 +7,9 @@ local Library = {
         if module == 'requests' then
             getgenv().requests = {
                 get = function(Url, body)
-                    if body == false then
-                        return string.format('[Response %s]',syn.request({Url=link}).StatusCode)
-                    elseif body == true then
+                    if not body then
+                        return string.format('[Response %s]',syn.request({Url=Url}).StatusCode)
+                    elseif body then
                         return syn.request({Url=Url}).Body
                     end
                 end,
