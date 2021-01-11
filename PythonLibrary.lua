@@ -50,7 +50,9 @@ local Library = {
                 --end
             }
         elseif module == 'mod' then
-            getgenv().Print = rconsoleprint
+            local function Print(string)
+                rconsoleprint(string)
+            end
         end
     end
 }
